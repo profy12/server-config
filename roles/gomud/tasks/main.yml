@@ -1,0 +1,8 @@
+---
+
+- name: Add user gomud
+  ansible.builtin.user:
+    name: gomud
+    comment: applicative user
+    create_home: true
+    state: present
