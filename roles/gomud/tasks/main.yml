@@ -6,3 +6,17 @@
     comment: applicative user
     create_home: true
     state: present
+
+- name: Copie systemd service file
+  ansible.builtin.copy:
+    src: gomud.service
+    dest: /etc/systemd/system/gomud.service
+    mode: "0644"
+
+- name: Activate service at start
+  ansible.builtin.systemd_service:
+    enabled: true
+    state: started
+    name: gomud
+    daemon_reload: true
+

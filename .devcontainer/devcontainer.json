@@ -7,8 +7,9 @@
 	"features": {
 		"ghcr.io/hspaans/devcontainer-features/ansible-lint:1": {},
 		"ghcr.io/devcontainers-extra/features/ansible:2": {},
-		"ghcr.io/devcontainers-extra/features/go-task:1": {}
-		}
+		"ghcr.io/devcontainers-extra/features/go-task:1": {},
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+		},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -18,6 +19,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+	"postCreateCommand": "pip3 install --user molecule ansible-lint molecule-plugins[docker]"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

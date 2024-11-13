@@ -1,4 +1,5 @@
 ---
-- hosts: go
+- name: Deploy config for gomud server
+  hosts: go
   roles:
-    - gomudp
+    - gomud
