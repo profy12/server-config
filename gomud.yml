@@ -3,3 +3,7 @@
   hosts: go
   roles:
     - gomud
+  vars:
+    user: gomud
+    github_users:
+      - profy12

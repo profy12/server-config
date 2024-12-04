@@ -1,0 +1,14 @@
+[Unit]
+Description=Go Application Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/gomud/bin/gomud-arm
+WorkingDirectory=/home/gomud/
+Restart=on-failure
+RestartSec=5
+User=gomud
+
+[Install]
+WantedBy=default.target
